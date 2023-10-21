@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  cs-app:
+    container_name: cs-app
+    build:
+      dockerfile: ./docker/local/app/Dockerfile
+      context: .
+    ports:
+      - 80:80
+    volumes:
+      - .:/app
+    tty: true
